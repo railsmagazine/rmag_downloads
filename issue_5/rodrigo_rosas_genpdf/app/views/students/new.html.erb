@@ -1,0 +1,8 @@
+<h1>New student</h1>
+
+<% form_for(@student) do |f| %>
+  <%= render :partial => "form", :locals => {:f => f} %> 
+  <div><%= f.submit 'Create' %></div>
+<% end %>
+
+<div><%= link_to 'Back', students_path %></div>

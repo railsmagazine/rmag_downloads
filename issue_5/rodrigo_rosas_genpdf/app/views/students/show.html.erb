@@ -1,0 +1,21 @@
+<div>
+  <strong>Name:</strong>
+  <%=h @student.name %>
+</div>
+
+<div>
+  <strong>Address:</strong>
+  <%=h @student.address %>
+</div>
+
+<table border="1" style="min-width: 30em">
+  <caption>Items</caption>
+  <tr><th>Item</th><th>Value</th></tr>
+<% @student.items.each do |item| %>
+  <tr><td><%=h item.name %></td><td><%=h item.value %></td></tr>
+<% end %>
+  <tr><th>Total</th><td style="font-weight: bold"><%= @student.items.inject(0){|sum, item| sum += item.value} %></td></tr>
+</table>
+
+<div><%= link_to 'Edit', edit_student_path(@student) %> |
+<%= link_to 'Back', students_path %></div>
