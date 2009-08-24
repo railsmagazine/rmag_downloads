@@ -1,0 +1,21 @@
+  <%= f.error_messages %>
+  <% 5.times {@student.items.build} %>
+
+  <div>
+    <%= f.label :name %>: <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :address %>: <%= f.text_field :address %>
+  </div>
+ 
+<fieldset>
+<legend>items</legend>
+  <% f.fields_for :items do |itf| %>
+    <div><%= itf.label :name, 'Item' %>: <%= itf.text_field :name %>
+      <%= itf.label :value, 'Value' %>: <%= itf.text_field :value %>
+      <% unless itf.object.nil? || itf.object.new_record? %>
+      <%= itf.label :_delete, 'Remove:' %> <%= itf.check_box :_delete %>
+      <% end %>
+    </div>
+  <% end %>
+</fieldset>

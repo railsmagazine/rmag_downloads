@@ -1,0 +1,2 @@
+#!/bin/sh
+/opt/openoffice.org3/program/python /usr/local/bin/DocumentConverter.py $@

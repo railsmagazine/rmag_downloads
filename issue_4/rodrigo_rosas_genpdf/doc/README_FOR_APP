@@ -1,0 +1,9 @@
+This is a sample application for demonstrating PDF generation from ODF templates.
+
+For testing:
+
+  rake db:migrate
+
+Start OpenOffice.org as a daemon and run the test:
+  utils/start-ooffice.sh
+  rake test

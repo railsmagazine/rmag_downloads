@@ -1,0 +1,21 @@
+<h1>Listing students</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+  </tr>
+
+<% @students.each do |student| %>
+  <tr>
+    <td><%=h student.name %></td>
+    <td><%=h student.address %></td>
+    <td><%= link_to 'Show', student %></td>
+    <td><%= link_to 'Edit', edit_student_path(student) %></td>
+    <td><%= link_to 'Destroy', student, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Generate contract', contract_student_path(student) %></td>
+  </tr>
+<% end %>
+</table>
+
+<div style="margin-top: 2em"><%= link_to 'New student', new_student_path %></div>
