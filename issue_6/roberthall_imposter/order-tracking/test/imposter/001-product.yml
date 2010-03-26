@@ -1,0 +1,12 @@
+--- 
+product: 
+  quantity: 122
+  fields: 
+    id: i.to_s
+    name: Imposter::Vegtable.multiple
+    desc: Faker::Lorem.sentence.to_a
+    size: Imposter.numerify("##").to_a + "x".to_a + Imposter.numerify("##cm").to_a
+    weight: Imposter.numerify("###.##").to_a
+    est_reorder_dt: Date.today.to_s
+    vendor_id: "@vendors[rand(@vendors.length)][1]"
+    lst_order_dt: (Date.today-3).to_s

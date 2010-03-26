@@ -1,0 +1,39 @@
+<h1>New product</h1>
+
+<% form_for(@product) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :desc %><br />
+    <%= f.text_field :desc %>
+  </p>
+  <p>
+    <%= f.label :lst_order_dt %><br />
+    <%= f.date_select :lst_order_dt %>
+  </p>
+  <p>
+    <%= f.label :est_reorder_dt %><br />
+    <%= f.date_select :est_reorder_dt %>
+  </p>
+  <p>
+    <%= f.label :vendor_id %><br />
+    <%= f.text_field :vendor_id %>
+  </p>
+  <p>
+    <%= f.label :size %><br />
+    <%= f.text_field :size %>
+  </p>
+  <p>
+    <%= f.label :weight %><br />
+    <%= f.text_field :weight %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', products_path %>

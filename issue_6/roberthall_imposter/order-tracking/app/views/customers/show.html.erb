@@ -1,0 +1,10 @@
+<div id='customer_show' style="border:1px solid black">
+<%=@customer.name%><br>
+<%=@customer.address1%> <%=@customer.address2%><br>
+<%=@customer.city%> <%=@customer.state%> <%=@customer.postal%><br></br>
+</div>
+Phone: <%=@customer.primary_phone%>   |   Alt. Phone: <%=@customer.secondary_phone%><br><br>
+eMail: <%=@customer.email_address%><br>
+Website: <%=@customer.website%><br>
+<%= link_to 'Edit', edit_customer_path(@customer) %> |
+<%= link_to 'Back', customers_path %>

@@ -1,0 +1,28 @@
+<h1>Editing order</h1>
+
+<% form_for(@order) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <label for="order_customer">Customer</label>:
+    <%= collection_select(:order, :customer_id, Customer.all, :id, :name, {:prompt => true}) %>    
+  </p>
+  <p>
+    <%= f.label :ship_dt %><br />
+    <%= f.datetime_select :ship_dt %>
+  </p>
+  <p>
+    <label for="order_shipper">Shipper</label>:
+    <%= collection_select(:order, :shipper_id, Shipper.all, :id, :name, {:prompt => true}) %>    
+  </p>
+  <p>
+    <%= f.label :notes %><br />
+    <%= f.text_area :notes%>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @order %> |
+<%= link_to 'Back', orders_path %>

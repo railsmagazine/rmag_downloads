@@ -1,0 +1,9 @@
+--- 
+shipper: 
+  quantity: 15
+  fields: 
+    id: i.to_s
+    name: (Imposter::Mineral.one + ' '.to_a + Imposter::Animal.one).to_s.titleize
+    pickup_time: ((1+rand(6)).to_s + " PM EST").to_s
+    website: ("www." + @shippers[i][0].sub(' ','') + ".com").to_s
+    phone: Imposter::Phone.number("(###)\s###-####")

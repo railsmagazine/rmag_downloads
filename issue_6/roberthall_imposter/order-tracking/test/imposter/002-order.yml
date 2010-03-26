@@ -1,0 +1,9 @@
+--- 
+order: 
+  quantity: 400
+  fields: 
+    id: i.to_s
+    notes: Faker::Lorem.sentence(3)
+    shipper_id: "@shippers[rand(@shippers.length)][2]"
+    customer_id: "@customers[rand(@customers.length)][7]"
+    ship_dt: (Date.today + rand(7)).to_s

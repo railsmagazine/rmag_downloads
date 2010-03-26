@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%=h @shipper.name %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%=h @shipper.phone %>
+</p>
+
+<p>
+  <b>Website:</b>
+  <%=h @shipper.website %>
+</p>
+
+<p>
+  <b>Pickup time:</b>
+  <%=h @shipper.pickup_time %>
+</p>
+
+
+<%= link_to 'Edit', edit_shipper_path(@shipper) %> |
+<%= link_to 'Back', shippers_path %>

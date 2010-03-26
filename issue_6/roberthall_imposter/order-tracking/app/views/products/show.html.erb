@@ -1,0 +1,38 @@
+<p>
+  <b>Name:</b>
+  <%=h @product.name %>
+</p>
+
+<p>
+  <b>Desc:</b>
+  <%=h @product.desc %>
+</p>
+
+<p>
+  <b>Lst order dt:</b>
+  <%=h @product.lst_order_dt %>
+</p>
+
+<p>
+  <b>Est reorder dt:</b>
+  <%=h @product.est_reorder_dt %>
+</p>
+
+<p>
+  <b>Vendor:</b>
+  <%=h @product.vendor_id %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%=h @product.size %>
+</p>
+
+<p>
+  <b>Weight:</b>
+  <%=h @product.weight %>
+</p>
+
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>

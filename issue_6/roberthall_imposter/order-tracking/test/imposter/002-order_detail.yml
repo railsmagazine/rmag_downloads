@@ -1,0 +1,10 @@
+--- 
+order_detail: 
+  quantity: 1000
+  fields: 
+    price: rand(50).to_s + "." + (1000+rand(2000)).to_s
+    weight_lbs: rand(50).to_s + "." + (1000+rand(2000)).to_s
+    qty: 1 + rand(10)
+    product_id: "@products[rand(@products.length)][3]"
+    order_id: "@orders[rand(@orders.length)][2]"
+    id: i.to_s

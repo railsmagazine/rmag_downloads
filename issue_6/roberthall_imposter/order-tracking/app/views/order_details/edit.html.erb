@@ -1,0 +1,32 @@
+<h1>Editing order_detail</h1>
+
+<% form_for(@order_detail) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :order_id %><br />
+    <%= f.text_field :order_id %>
+  </p>
+  <p>
+    <%= f.label :product_id %><br />
+    <%= f.text_field :product_id %>
+  </p>
+  <p>
+    <%= f.label :qty %><br />
+    <%= f.text_field :qty %>
+  </p>
+  <p>
+    <%= f.label :weight_lbs %><br />
+    <%= f.text_field :weight_lbs %>
+  </p>
+  <p>
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @order_detail %> |
+<%= link_to 'Back', order_details_path %>

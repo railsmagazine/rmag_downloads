@@ -1,0 +1,59 @@
+<h1>New vendor</h1>
+
+<% form_for(@vendor) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :address1 %><br />
+    <%= f.text_field :address1 %>
+  </p>
+  <p>
+    <%= f.label :address2 %><br />
+    <%= f.text_field :address2 %>
+  </p>
+  <p>
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </p>
+  <p>
+    <%= f.label :postal %><br />
+    <%= f.text_field :postal %>
+  </p>
+  <p>
+    <%= f.label :contact %><br />
+    <%= f.text_field :contact %>
+  </p>
+  <p>
+    <%= f.label :email_address %><br />
+    <%= f.text_field :email_address %>
+  </p>
+  <p>
+    <%= f.label :timezone %><br />
+    <%= f.text_field :timezone %>
+  </p>
+  <p>
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </p>
+  <p>
+    <%= f.label :tollfree %><br />
+    <%= f.text_field :tollfree %>
+  </p>
+  <p>
+    <%= f.label :active %><br />
+    <%= f.text_field :active %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', vendors_path %>

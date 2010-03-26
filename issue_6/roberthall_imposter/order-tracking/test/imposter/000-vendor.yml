@@ -1,0 +1,16 @@
+--- 
+vendor: 
+  quantity: 23
+  fields: 
+    id: i.to_s
+    name: Imposter::Noun.one + ' '.to_a + Imposter::Verb.one
+    contact: Imposter::Vegtable.one + ' '.to_a + Imposter::Mineral.one
+    address1: Imposter::Street.name
+    address2: Imposter::Street.name
+    city: Imposter::CSZ.get_rand['city']
+    state: Imposter::CSZ.state
+    postal: Imposter::CSZ.zip5
+    phone: Imposter::Phone.number("(###)\s###-####")
+    email_address: Imposter::Mineral.one + '@'.to_a + Faker::Internet.domain_name.to_a + '.com'.to_a 
+    tollfree: Imposter::Phone.number("(800)\s###-####")
+    timezone: %w[est cst mst pst].shuffle[0,1].to_a

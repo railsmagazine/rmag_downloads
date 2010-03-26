@@ -1,0 +1,28 @@
+<p>
+  <b>Order:</b>
+  <%=h @order_detail.order_id %>
+</p>
+
+<p>
+  <b>Product:</b>
+  <%=h @order_detail.product_id %>
+</p>
+
+<p>
+  <b>Qty:</b>
+  <%=h @order_detail.qty %>
+</p>
+
+<p>
+  <b>Weight lbs:</b>
+  <%=h @order_detail.weight_lbs %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%=h @order_detail.price %>
+</p>
+
+
+<%= link_to 'Edit', edit_order_detail_path(@order_detail) %> |
+<%= link_to 'Back', order_details_path %>

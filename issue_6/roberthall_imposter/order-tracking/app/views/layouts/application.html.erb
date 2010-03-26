@@ -1,0 +1,21 @@
+<html>
+	
+<head>
+<title>Order Tracking</title>
+  <%= stylesheet_link_tag 'scaffold' %>
+</head>
+<body>
+<form>	
+<% ubermenu do |m| %>
+  <% m.action "Home", "/orders" %>
+  <% m.action "Products", "/products" %>
+  <% m.action "Customers", "/customers" %>
+  <% m.action "Vendors", "/vendors" %>
+  <% m.action "Shippers", "/shippers" %>
+<% end %>
+<p style="color: green"><%= flash[:notice] %></p>
+
+<%= yield%>
+</form>
+</body>
+</html>

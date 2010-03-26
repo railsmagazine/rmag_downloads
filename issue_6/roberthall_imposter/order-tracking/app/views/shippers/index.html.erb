@@ -1,0 +1,26 @@
+<h1>Listing shippers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Phone</th>
+    <th>Website</th>
+    <th>Pickup time</th>
+  </tr>
+
+<% @shippers.each do |shipper| %>
+  <tr>
+    <td><%=h shipper.name %></td>
+    <td><%=h shipper.phone %></td>
+    <td><%=h shipper.website %></td>
+    <td><%=h shipper.pickup_time %></td>
+    <td><%= link_to 'Show', shipper %></td>
+    <td><%= link_to 'Edit', edit_shipper_path(shipper) %></td>
+    <td><%= link_to 'Destroy', shipper, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New shipper', new_shipper_path %>

@@ -1,0 +1,40 @@
+<h1>Listing vendors</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address1</th>
+    <th>Address2</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Postal</th>
+    <th>Contact</th>
+    <th>Email address</th>
+    <th>Timezone</th>
+    <th>Phone</th>
+    <th>Tollfree</th>
+  </tr>
+
+<% @vendors.each do |vendor| %>
+  <tr>
+    <td><%=h vendor.name %></td>
+    <td><%=h vendor.address1 %></td>
+    <td><%=h vendor.address2 %></td>
+    <td><%=h vendor.city %></td>
+    <td><%=h vendor.state %></td>
+    <td><%=h vendor.postal %></td>
+    <td><%=h vendor.contact %></td>
+    <td><%=h vendor.email_address %></td>
+    <td><%=h vendor.timezone %></td>
+    <td><%=h vendor.phone %></td>
+    <td><%=h vendor.tollfree %></td>
+    <td><%= link_to 'Show', vendor %></td>
+    <td><%= link_to 'Edit', edit_vendor_path(vendor) %></td>
+    <td><%= link_to 'Destroy', vendor, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New vendor', new_vendor_path %>

@@ -1,0 +1,17 @@
+--- 
+customer: 
+  quantity: 76
+  fields: 
+    id: i.to_s
+    name: (Imposter::Noun.one+['_']+Imposter::Verb.one).to_s.titleize
+    address1: Imposter::Street.full
+    address2: Imposter::Street.full
+    city: Imposter::CSZ.get_rand['city']
+    state: Imposter::CSZ.state
+    postal: Imposter::CSZ.zip5
+    contact: (Imposter::Animal.one+['_']+Imposter::Noun.one).to_s.titleize
+    website: ('http://www.'.to_a+Faker::Internet.domain_name.to_a+'.com'.to_a).to_s.downcase
+    email_address: Faker::Internet.email.to_a
+    primary_phone: Imposter::Phone.number("(###)\s###-####")
+    secondary_phone: Imposter::Phone.number
+

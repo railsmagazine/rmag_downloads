@@ -1,0 +1,24 @@
+<p>
+  <b>Customer # / Customer:</b>
+  [<%= @order.customer_id%>] 
+  <%= @order.customer.name%>
+</p>
+
+<p>
+  <b>Shipdate:</b>
+  <%=h @order.ship_dt %>
+</p>
+
+<p>
+  <b>Shipper #/Shipper:</b>
+  [<%=h @order.shipper_id %>] 
+  <%=h @order.shipper.name%>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%=h @order.notes %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>
